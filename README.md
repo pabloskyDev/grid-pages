@@ -26,8 +26,8 @@ Build a webpage using the resources provided by Platzi, this is part of a Platzi
 
 ### Grid Basic
 
-- Live Site developed by me - [basic.dev](https://jb-dev-batatabit.netlify.app/)
-- Repository of the Website - [Github](https://github.com/pabloskyDev/mobile-first)
+- Live Site developed by me - [basic.dev](https://grid-basic.netlify.app/)
+- Repository of the Website - [Github](https://github.com/pabloskyDev/grid-pages/tree/main/grid-basic)
 
 ### Grid Blog
 
