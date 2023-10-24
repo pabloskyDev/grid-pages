@@ -1,0 +1,211 @@
+:root {
+    --primary: #FF8989;
+    --primary-dark: #FF6666;
+    --primary-light: #FCAEAE;
+    --primary-background: #FFEADD;
+
+    --black: #040D12;
+    --gray: #666666;
+    --gray-light: #bbbbbb;
+    --white: #F6FEFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    font-family: 'Mulish', 'Quicksand', sans-serif;
+}
+
+body, html {
+    background-color: var(--white);
+    color: var(--black);
+    height: 100vh;
+    overflow-y: auto;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 1rem;
+}
+
+h1, h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.home {
+    display: grid;
+    grid-auto-rows: min-content;
+    place-content: center;
+}
+
+.home h1 {
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.home p {
+    text-align: justify;
+}
+
+.home button {
+    display: block;
+    padding: 0.5rem 2rem;
+    margin: 16px auto;
+    background-color: var(--primary);
+    color: var(--white);
+    border: 0px;
+    border-radius: 0.8rem;
+}
+
+.home button:hover {
+    cursor: pointer;
+    background-color: var(--primary-dark);
+}
+
+.home .home__img {
+    width: 80vw;
+    margin: 0px auto;
+}
+
+.home__img img {
+    width: 100%;
+}
+
+.services article{
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 8px;
+}
+
+.services__video {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.services__video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-box-shadow: 2px 15px 19px -14px rgba(4,13,18,0.67);
+    -moz-box-shadow: 2px 15px 19px -14px rgba(4,13,18,0.67);
+    box-shadow: 2px 15px 19px -14px rgba(4,13,18,0.67);
+}
+
+.services__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+.services__gallery li {
+    height: minmax(150px, 1fr);
+    -webkit-box-shadow: 2px 15px 19px -14px rgba(4,13,18,0.67);
+    -moz-box-shadow: 2px 15px 19px -14px rgba(4,13,18,0.67);
+    box-shadow: 2px 15px 19px -14px rgba(4,13,18,0.67);
+}
+
+.services__gallery li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu__grid {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.menu__grid li:hover{
+    cursor: pointer;
+    border-radius: 16px 0px;
+    -webkit-box-shadow: 2px 15px 19px -14px rgba(252,174,174,1);
+    -moz-box-shadow: 2px 15px 19px -14px rgba(252,174,174,1);
+    box-shadow: 2px 15px 19px -14px rgba(252,174,174,1);
+}
+
+.menu__grid li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.test {
+    background-color: var(--gray-light);
+    display: grid; 
+    grid-template-columns: repeat(3, 3fr);
+}
+
+.test .item {
+    background-color: var(--primary);
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 600px) {
+    .home {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .home .home__info {
+        display: grid;
+        place-content: center;
+    }
+    .home__info h1 {
+        max-width: 200px;
+        text-align: start;
+    }
+    .home__info p {
+        max-width: 420px;
+        text-align: start;
+    }
+    .home__info button {
+        width: 150px;
+        margin: 16px 0px;
+    }
+    .home .home__img {
+        width: 40vw;
+    }
+    .services article{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, min-content);
+    }
+    .services__video {
+        height: 400px;
+    }
+    .services__gallery {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 200px;
+    }
+    .menu__grid {
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .services article{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services__video {
+        height: 100%;
+    }
+    .services__gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .menu__grid {
+        grid-template-columns: repeat(5, minmax(150px, 1fr));
+    }
+}
